@@ -31,9 +31,10 @@ Route::get('/', function () {
 //     })
 //     ->get();
 
+// $users = DB::table('users')->whereJsonContains('meta->skills','Laravel')->get();
+$users = DB::table('users')->where('meta->settings->site_language','en')->get();
 
-
-//     dump($users);
+    dump($users);
   
 
     return view('welcome');
