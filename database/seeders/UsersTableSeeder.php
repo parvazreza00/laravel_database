@@ -16,37 +16,71 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
+        $faker = Faker::create();
+
         User::create([
             'name' => 'Parvaz',
             'email' => 'parvaz@gmail.com',
             'phone' => '01738920277',
             'address' => 'Dhaka',
             'password' => bcrypt('password'),
+            'meta' => [
+                'settings' => [
+                    'site_background' => 'black',
+                    'site_language' => 'en',
+                ],
+                'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                'gander' => $faker->randomElement(['male', 'female', 'Other']),
+            ]
         ]);
 
-        User::insert([
-            [
-                'name' => 'Reza',
-                'email' => 'reza@gmail.com',
-                'phone' => '01738920290',
-                'address' => 'Chattagram',
-                'password' => Hash::make('password'),
-            ],
-            [
-                'name' => 'Yeasin',
-                'email' => 'yeasin@gmail.com',
-                'phone' => '01738900290',
-                'address' => 'Faridpur',
-                'password' => Hash::make('password'),
-            ],
-            [
-                'name' => 'ParvazReza',
-                'email' => 'parvazreza@gmail.com',
-                'phone' => '01738700290',
-                'address' => 'Rajshahi',
-                'password' => Hash::make('password'),
-            ],
-        ]);
+        // User::insert([
+        //     [
+        //         'name' => 'Reza',
+        //         'email' => 'reza@gmail.com',
+        //         'phone' => '01738920290',
+        //         'address' => 'Chattagram',
+        //         'password' => Hash::make('password'),
+        //         'meta' => [
+        //             'settings' => [
+        //                 'site_background' => 'black',
+        //                 'site_language' => 'en',
+        //             ],
+        //             'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+        //             'gander' => $faker->randomElement(['male', 'female', 'Other']),
+        //         ]
+        //     ],
+        //     [
+        //         'name' => 'Yeasin',
+        //         'email' => 'yeasin@gmail.com',
+        //         'phone' => '01738900290',
+        //         'address' => 'Faridpur',
+        //         'password' => Hash::make('password'),
+        //         'meta' => [
+        //             'settings' => [
+        //                 'site_background' => 'black',
+        //                 'site_language' => 'en',
+        //             ],
+        //             'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+        //             'gander' => $faker->randomElement(['male', 'female', 'Other']),
+        //         ]
+        //     ],
+        //     [
+        //         'name' => 'ParvazReza',
+        //         'email' => 'parvazreza@gmail.com',
+        //         'phone' => '01738700290',
+        //         'address' => 'Rajshahi',
+        //         'password' => Hash::make('password'),
+        //         'meta' => [
+        //             'settings' => [
+        //                 'site_background' => 'black',
+        //                 'site_language' => 'en',
+        //             ],
+        //             'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+        //             'gander' => $faker->randomElement(['male', 'female', 'Other']),
+        //         ]
+        //     ],
+        // ]);
 
         $users = [
             [
@@ -55,6 +89,14 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01758920290',
                 'address' => 'Chapinababgonj',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
             [
                 'name' => 'Hasan',
@@ -62,6 +104,14 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01738000290',
                 'address' => 'Shylhet',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
             [
                 'name' => 'Jabed',
@@ -69,6 +119,14 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01798700290',
                 'address' => 'Bhola',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
             [
                 'name' => 'Arman',
@@ -76,6 +134,14 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01798790290',
                 'address' => 'Khulna',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
             [
                 'name' => 'Thasan',
@@ -83,6 +149,14 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01798740290',
                 'address' => 'Potuakhali',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
             [
                 'name' => 'Taleb',
@@ -90,9 +164,17 @@ class UsersTableSeeder extends Seeder
                 'phone' => '01797700290',
                 'address' => 'Bhola',
                 'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
             ],
         ];
-        foreach($users as $user){
+        foreach ($users as $user) {
             User::create($user);
         }
 

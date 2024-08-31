@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Comment;
+use App\Models\Reservation;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CommentSeeder::class,
             RoomSeeder::class,
+            ReservationSeeder::class,
         ]);
 
         // User::factory(25)->create();
