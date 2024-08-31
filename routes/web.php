@@ -6,25 +6,36 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
 
-    // $users = User::all();
-    // dd($users);
-    // // dump($users);
-    // $pdo = DB::Connection('mysql')->getPdo();
-    // $users = $pdo->query('select * from users where id=50')->fetchAll();
-    // $users = DB::select('select * from users where id = :id', ['id'=>23]);
-    // $users = DB::select('select * from users');
-    // $users = DB::select('select * from users where id = ?', [1]);
-    // $users = DB::select('select * from users where id = 1');
-    // $users = DB::insert('insert into users (name, email, phone, address, password)
-    // values (?, ?, ?, ?, ?)', ['thamin','thamin@gmail.com','01712345678','dhaka','password']);
-    $users = DB::table('users')->orderBy('id','desc')->first();
+    
+
+    // $users = DB::table('users')->select()->get();
+    // $comments = DB::table('comments')->select()->get();
+    // $users = DB::table('users')->where('name','Parvaz')->first();
+    // $users = DB::table('users')->where('name','Parvaz')->value('phone');
+    // $users = DB::table('users')->pluck('name');
+    // $users = DB::table('users')->find(3);
+
+    // $comments = DB::table('comments')->select('comment as user_comment')->get();
+    // $comments = DB::table('comments')->select('user_id')->distinct()->get();
+    // $comments = DB::table('comments')->count();
+    // $comments = DB::table('comments')->where('comment','comment')->exists();
+    // $comments = DB::table('comments')->where('comment','comment')->doesntExist();
+
+    // $rooms = DB::table('rooms')->get();
+    // $rooms = DB::table('rooms')->where('price','<',15000)->count();
+    // $rooms = DB::table('rooms')->where('price','<',15000)->get();
+    // $rooms = DB::table('rooms')
+    // ->where(
+    //    [
+    //     ['price','<',15000],
+    //     ['room_size','<',10]
+    //    ]
+    //     )->get();
+    $rooms = DB::table('rooms')->where('price','<',15000)->orWhere('room_size','<','10')->get();
 
 
-    // foreach($users as $user){
-    //     echo $user->name;
-    //     echo "<br>";
-    // }
-    dump($users);
+    
+    dump($rooms);
 
     return view('welcome');
 });

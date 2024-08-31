@@ -70,32 +70,53 @@ class UsersTableSeeder extends Seeder
                 'address' => 'Bhola',
                 'password' => Hash::make('password'),
             ],
+            [
+                'name' => 'Arman',
+                'email' => 'arman@gmail.com',
+                'phone' => '01798790290',
+                'address' => 'Khulna',
+                'password' => Hash::make('password'),
+            ],
+            [
+                'name' => 'Thasan',
+                'email' => 'thasan@gmail.com',
+                'phone' => '01798740290',
+                'address' => 'Potuakhali',
+                'password' => Hash::make('password'),
+            ],
+            [
+                'name' => 'Taleb',
+                'email' => 'taleb@gmail.com',
+                'phone' => '01797700290',
+                'address' => 'Bhola',
+                'password' => Hash::make('password'),
+            ],
         ];
         foreach($users as $user){
             User::create($user);
         }
 
-        $faker = Faker::create();
-        foreach(range(1,10) as $index){
-            User::create([
-                'name' => $faker->name(),
-                'email' => $faker->unique()->safeEmail(),
-                'phone' => $faker->phoneNumber(),
-                'address' => $faker->address(),
-                'password' => bcrypt('password'),
-            ]);
-        }
+        // $faker = Faker::create();
+        // foreach(range(1,10) as $index){
+        //     User::create([
+        //         'name' => $faker->name(),
+        //         'email' => $faker->unique()->safeEmail(),
+        //         'phone' => $faker->phoneNumber(),
+        //         'address' => $faker->address(),
+        //         'password' => bcrypt('password'),
+        //     ]);
+        // }
 
-        $faker = Faker::create();
-        foreach(range(1,10) as $index){
-            DB::table('users')->insert([
-                'name' => $faker->name(),
-                'email' => $faker->unique()->safeEmail(),
-                'phone' => $faker->phoneNumber(),
-                'address' => $faker->address(),
-                'password' => bcrypt('password'),
-            ]);
-        }
+        // $faker = Faker::create();
+        // foreach(range(1,10) as $index){
+        //     DB::table('users')->insert([
+        //         'name' => $faker->name(),
+        //         'email' => $faker->unique()->safeEmail(),
+        //         'phone' => $faker->phoneNumber(),
+        //         'address' => $faker->address(),
+        //         'password' => bcrypt('password'),
+        //     ]);
+        // }
 
 
     }
