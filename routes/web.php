@@ -32,9 +32,32 @@ Route::get('/', function () {
 //     ->get();
 
 // $users = DB::table('users')->whereJsonContains('meta->skills','Laravel')->get();
-$users = DB::table('users')->where('meta->settings->site_language','en')->get();
+//  $comments = DB::table('comments')->where('comment','LIKE','%Sit%')->get();
+//  $comments = DB::table('comments')->whereRaw('comment LIKE "%Sit%"')->get();
 
-    dump($users);
+// $results = DB::table('comments')
+// ->select(DB::raw('count(user_id) as number_of_comments, users.name'))
+// ->join('users','users.id','=','comments.user_id')
+// ->groupBy('user_id')
+// ->get();
+
+    // $orders = DB::table('orders')
+    // ->selectRaw('total_amount * ? as price_with_tax', [2.90])
+    // ->whereRaw('user_id = ?', [4])
+    // ->get();
+
+    // $orders = DB::table('comments')
+    // ->selectRaw('count(id) as number_of_5stars_comment, rating')
+    // ->groupBy('rating')
+    // ->having('rating','=',5)
+    // ->get();
+    $comments = DB::table('comments')
+    ->skip(5)
+    ->take(2)
+    ->get();
+
+
+    dump($comments);
   
 
     return view('welcome');

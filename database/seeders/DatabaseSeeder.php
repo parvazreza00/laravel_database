@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CommentSeeder::class,
             RoomSeeder::class,
             ReservationSeeder::class,
+            OrderSeeder::class,
         ]);
 
         // User::factory(25)->create();

@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->text('comment')->nullable();
-            $table->integer('rating')->nullable();
-            $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('order_number')->unique();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->decimal('total_amount', 10, 2);
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     */
+    */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('orders');
     }
 };

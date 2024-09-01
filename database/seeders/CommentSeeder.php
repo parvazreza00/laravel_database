@@ -20,6 +20,7 @@ class CommentSeeder extends Seeder
             Comment::insert([
                 'user_id' => $faker->numberBetween(1,10),
                 'comment' => $faker->text(500),
+                'rating' => $faker->numberBetween(1,5),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
