@@ -4,10 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
-Route::get('/', function () {
-
-    
+Route::get('/', function () {    
     
     // $rooms = DB::table('rooms')->whereNotBetween('room_size',[5,9])->get();
     // $rooms = DB::table('rooms')->whereIn('room_size',[5,9])->get();
@@ -51,13 +50,14 @@ Route::get('/', function () {
     // ->groupBy('rating')
     // ->having('rating','=',5)
     // ->get();
-    $comments = DB::table('comments')
-    ->skip(5)
-    ->take(2)
-    ->get();
+    // $comments = DB::table('comments')
+    // ->skip(5)
+    // ->take(2)
+    // ->get();
 
 
-    dump($comments);
+
+    // dump($comments);
   
 
     return view('welcome');
