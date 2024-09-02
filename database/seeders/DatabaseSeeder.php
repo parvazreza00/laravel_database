@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CommentSeeder::class,
             RoomSeeder::class,
+            CitySeeder::class,
             ReservationSeeder::class,
             OrderSeeder::class,
         ]);
