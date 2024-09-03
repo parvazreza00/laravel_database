@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Comment;
+use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Contracts\Database\Eloquent\Builder;
@@ -10,16 +12,18 @@ Route::get('/', function () {
     
   
 
-    $results = DB::table('rooms')
-    ->leftJoin('reservations','rooms.id', '=', 'reservations.room_id')
-    ->leftJoin('cities','reservations.city_id', '=', 'cities.id')
-    ->selectRaw('room_size,cities.name, count(reservations.id) as reservations_count')
-    ->groupBy('room_size','cities.name')
-    ->orderByRaw('count(reservations.id) DESC')
-    ->get();
-    
-    dump($results);
-   
+//    $results = User::all();
+//    foreach($results as $res){
+//     echo $res->name_email."=>".$res->addressphone."<br>";
+//    }
+// $results = new User();
+// $results->name = "rasel";
+// $results->email = "rasel@gmail.com";
+// $results->phone = "98459458";
+// $results->address = "raseladd";
+// $results->password = bcrypt('password');
+// $results->save();
+
 
 
 

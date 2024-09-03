@@ -45,4 +45,19 @@ class User extends Authenticatable
             'meta' => 'json',
         ];
     }
+
+    public function getNameEmailAttribute()
+    {
+        return $this->name."-".$this->email;
+    }
+
+    public function getAddressPhoneAttribute()
+    {
+        return $this->address." & ".$this->phone;
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucfirst($value);
+    }
 }
