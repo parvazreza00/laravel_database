@@ -9,4 +9,8 @@ class Room extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function cities(){
+        return $this->belongsToMany(City::class)->withPivot('created_at','updated_at');
+    }
 }

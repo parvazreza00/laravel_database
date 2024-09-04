@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Address;
+use App\Models\City;
 use App\Models\Comment;
 use App\Models\Room;
 use Illuminate\Support\Facades\Route;
@@ -10,24 +12,15 @@ use Illuminate\Support\Collection;
 
 Route::get('/', function () {    
     
-  
 
-//    $results = User::all();
-//    foreach($results as $res){
-//     echo $res->name_email."=>".$res->addressphone."<br>";
-//    }
-// $results = new User();
-// $results->name = "rasel";
-// $results->email = "rasel@gmail.com";
-// $results->phone = "98459458";
-// $results->address = "raseladd";
-// $results->password = bcrypt('password');
-// $results->save();
+   
+    //  $results = Comment::find(5);
+     $results = Address::find(5);
 
 
 
 
-    // dump($comments);
+    dump($results->comment->user_comment);
   
 
     return view('home');

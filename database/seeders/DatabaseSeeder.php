@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
             ReservationSeeder::class,
             OrderSeeder::class,
+            AddressSeeder::class,
+            CityRoomSeeder::class,
         ]);
 
         // User::factory(25)->create();

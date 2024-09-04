@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Parvaz',
             'email' => 'parvaz@gmail.com',
             'phone' => '01738920277',
-            'address' => 'Dhaka',
+            // 'address' => 'Dhaka',
             'password' => bcrypt('password'),
             'meta' => [
                 'settings' => [
@@ -87,7 +87,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Tomal',
                 'email' => 'tomal@gmail.com',
                 'phone' => '01758920290',
-                'address' => 'Chapinababgonj',
+                // 'address' => 'Chapinababgonj',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [
@@ -102,7 +102,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Hasan',
                 'email' => 'hasan@gmail.com',
                 'phone' => '01738000290',
-                'address' => 'Shylhet',
+                // 'address' => 'Shylhet',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [
@@ -117,7 +117,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Jabed',
                 'email' => 'jabed@gmail.com',
                 'phone' => '01798700290',
-                'address' => 'Bhola',
+                // 'address' => 'Bhola',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [
@@ -132,7 +132,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Arman',
                 'email' => 'arman@gmail.com',
                 'phone' => '01798790290',
-                'address' => 'Khulna',
+                // 'address' => 'Khulna',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [
@@ -147,7 +147,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Thasan',
                 'email' => 'thasan@gmail.com',
                 'phone' => '01798740290',
-                'address' => 'Potuakhali',
+                // 'address' => 'Potuakhali',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [
@@ -162,7 +162,52 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Taleb',
                 'email' => 'taleb@gmail.com',
                 'phone' => '01797700290',
-                'address' => 'Bhola',
+                // 'address' => 'Bhola',
+                'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
+            ],
+            [
+                'name' => 'MotaTaleb',
+                'email' => 'MotaTaleb@gmail.com',
+                'phone' => '01797600290',
+                // 'address' => 'Bhola',
+                'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
+            ],
+            [
+                'name' => 'Roni',
+                'email' => 'roni@gmail.com',
+                'phone' => '01797300290',
+                // 'address' => 'Bhola',
+                'password' => Hash::make('password'),
+                'meta' => [
+                    'settings' => [
+                        'site_background' => 'black',
+                        'site_language' => 'en',
+                    ],
+                    'skills' =>  $faker->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
+                    'gander' => $faker->randomElement(['male', 'female', 'Other']),
+                ]
+            ],
+            [
+                'name' => 'Tarek',
+                'email' => 'tarek@gmail.com',
+                'phone' => '09797700290',
+                // 'address' => 'Bhola',
                 'password' => Hash::make('password'),
                 'meta' => [
                     'settings' => [

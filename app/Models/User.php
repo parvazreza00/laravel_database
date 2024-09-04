@@ -60,4 +60,13 @@ class User extends Authenticatable
     {
         $this->attributes['name'] = ucfirst($value);
     }
+
+    public function address(){
+        return $this->hasOne(Address::class,'user_id','id');
+    }
+
+    public function comment(){
+        return $this->hasMany(Comment::class,'user_id','id');
+    }
+
 }
