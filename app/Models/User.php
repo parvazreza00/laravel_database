@@ -69,4 +69,16 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class,'user_id','id');
     }
 
+    public function image(){
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+    public function likeImages(){
+        return $this->morphedByMany(Image::class, 'likeable');
+    }
+
+    public function likeRooms(){
+        return $this->morphedByMany(Room::class, 'likeable');
+    }
+
 }

@@ -12,4 +12,8 @@ class City extends Model
     public function rooms(){
         return $this->belongsToMany(Room::class)->withPivot('created_at','updated_at');
     }
+
+    public function image(){
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

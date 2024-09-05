@@ -3,6 +3,8 @@
 use App\Models\Address;
 use App\Models\City;
 use App\Models\Comment;
+use App\Models\Company;
+use App\Models\Image;
 use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -14,14 +16,14 @@ Route::get('/', function () {
     
 
    
-    //  $results = Comment::find(5);
-     $results = Address::find(5);
+    //  $results = User::find(5);
+    //  $results = Image::find(2);
+    // $results = Comment::find(2);
+    $results = Room::find(2);
 
+    //  dump($results->likeImages, $results->likeRooms);
+    dump($results->likes);
 
-
-
-    dump($results->comment->user_comment);
-  
 
     return view('home');
 });

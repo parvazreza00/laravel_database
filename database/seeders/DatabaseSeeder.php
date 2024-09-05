@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
+            CompanySeeder::class,
             UsersTableSeeder::class,
             CommentSeeder::class,
             RoomSeeder::class,
@@ -24,6 +25,8 @@ class DatabaseSeeder extends Seeder
             OrderSeeder::class,
             AddressSeeder::class,
             CityRoomSeeder::class,
+            ImageSeeder::class,
+            LikeablesSeeder::class,
         ]);
 
         // User::factory(25)->create();

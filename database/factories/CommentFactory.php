@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Image;
+use App\Models\Room;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +21,9 @@ class CommentFactory extends Factory
         return [
             'user_id' => fake()->numberBetween(1,10),
             'comment' => fake()->text(500),
+            'rating' => fake()->numberBetween(1,5),
+            'commentable_id' => fake()->numberBetween(1,10),
+            'commentable_type' => fake()->randomElement([Room::class, Image::class]),
         ];
     }
 }

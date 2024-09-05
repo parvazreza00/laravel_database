@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class Image extends Model
 {
     use HasFactory;
-    protected $guarded = [];
 
-    public function cities(){
-        return $this->belongsToMany(City::class)->withPivot('created_at','updated_at');
+    public function imageable(){
+        return $this->morphTo();
     }
 
     public function comments()
@@ -22,4 +21,5 @@ class Room extends Model
     public function likes(){
         return $this->morphToMany(User::class, 'likeable');
     }
+    
 }

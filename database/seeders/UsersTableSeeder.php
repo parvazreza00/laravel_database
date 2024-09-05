@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
 
         User::create([
             'name' => 'Parvaz',
+            'company_id' => 1,
             'email' => 'parvaz@gmail.com',
             'phone' => '01738920277',
             // 'address' => 'Dhaka',
@@ -85,6 +86,7 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name' => 'Tomal',
+                'company_id' => 3,
                 'email' => 'tomal@gmail.com',
                 'phone' => '01758920290',
                 // 'address' => 'Chapinababgonj',
@@ -100,6 +102,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Hasan',
+                'company_id' => 2,
                 'email' => 'hasan@gmail.com',
                 'phone' => '01738000290',
                 // 'address' => 'Shylhet',
@@ -115,6 +118,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Jabed',
+                'company_id' => 4,
                 'email' => 'jabed@gmail.com',
                 'phone' => '01798700290',
                 // 'address' => 'Bhola',
@@ -130,6 +134,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Arman',
+                'company_id' => 1,
                 'email' => 'arman@gmail.com',
                 'phone' => '01798790290',
                 // 'address' => 'Khulna',
@@ -145,6 +150,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Thasan',
+                'company_id' => 4,
                 'email' => 'thasan@gmail.com',
                 'phone' => '01798740290',
                 // 'address' => 'Potuakhali',
@@ -160,6 +166,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Taleb',
+                'company_id' => 3,
                 'email' => 'taleb@gmail.com',
                 'phone' => '01797700290',
                 // 'address' => 'Bhola',
@@ -175,6 +182,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'MotaTaleb',
+                'company_id' => 5,
                 'email' => 'MotaTaleb@gmail.com',
                 'phone' => '01797600290',
                 // 'address' => 'Bhola',
@@ -190,6 +198,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Roni',
+                'company_id' => 2,
                 'email' => 'roni@gmail.com',
                 'phone' => '01797300290',
                 // 'address' => 'Bhola',
@@ -205,6 +214,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'Tarek',
+                'company_id' => 4,
                 'email' => 'tarek@gmail.com',
                 'phone' => '09797700290',
                 // 'address' => 'Bhola',
