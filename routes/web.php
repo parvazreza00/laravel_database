@@ -16,13 +16,22 @@ Route::get('/', function () {
     
 
    
-    //  $results = User::find(5);
-    //  $results = Image::find(2);
-    // $results = Comment::find(2);
-    $results = Room::find(2);
+    // $results = User::find(2)->comment()
+    // ->where('rating','>',3)
+    // ->orWhere('rating','<',2)
+    // ->get();
 
-    //  dump($results->likeImages, $results->likeRooms);
-    dump($results->likes);
+    // $results = User::find(1)->comment()
+    // ->where(function($query){
+    //     return $query->where('rating','>',3)
+    //     ->orWhere('rating','<',2);
+        
+    // })
+    // ->get();
+
+    $results = User::has('comment','>=',2)->get();
+
+    dump($results);
 
 
     return view('home');
