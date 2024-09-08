@@ -46,6 +46,8 @@ class User extends Authenticatable
         ];
     }
 
+    protected $with = ['address'];
+
     public function getNameEmailAttribute()
     {
         return $this->name."-".$this->email;

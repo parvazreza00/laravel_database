@@ -5,6 +5,7 @@ use App\Models\City;
 use App\Models\Comment;
 use App\Models\Company;
 use App\Models\Image;
+use App\Models\Reservation;
 use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -14,23 +15,14 @@ use Illuminate\Support\Collection;
 
 Route::get('/', function () {    
     
-
-   
-    // $results = User::find(2)->comment()
-    // ->where('rating','>',3)
-    // ->orWhere('rating','<',2)
-    // ->get();
-
-    // $results = User::find(1)->comment()
-    // ->where(function($query){
-    //     return $query->where('rating','>',3)
-    //     ->orWhere('rating','<',2);
-        
-    // })
-    // ->get();
-
-    $results = User::has('comment','>=',2)->get();
-
+ 
+    // $results = Reservation::with('user.address')->get();
+    // foreach($results as $res){
+    //     echo $res->user->address->street."<br>";
+    // }
+    $results = User::all();
+    // $results->load('address');
+    // $results = Image::with('imageable')->get();
     dump($results);
 
 

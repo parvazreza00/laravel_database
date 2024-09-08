@@ -11,7 +11,7 @@ class Room extends Model
     protected $guarded = [];
 
     public function cities(){
-        return $this->belongsToMany(City::class)->withPivot('created_at','updated_at');
+        return $this->belongsToMany(City::class)->withPivot('created_at','updated_at')->using(CityRoom::class);
     }
 
     public function comments()

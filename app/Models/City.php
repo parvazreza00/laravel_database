@@ -10,7 +10,7 @@ class City extends Model
     use HasFactory;
 
     public function rooms(){
-        return $this->belongsToMany(Room::class)->withPivot('created_at','updated_at');
+        return $this->belongsToMany(Room::class)->withPivot('created_at','updated_at')->using(CityRoom::class);
     }
 
     public function image(){
