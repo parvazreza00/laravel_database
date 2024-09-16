@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             OrderSeeder::class,
             AddressSeeder::class,
             CityRoomSeeder::class,
+            ImageSeeder::class,
+            LikeablesSeeder::class,
         ]);
 
         // User::factory(25)->create();
