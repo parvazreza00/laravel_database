@@ -4,17 +4,20 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
 use Illuminate\Support\Facades\DB;
-use App\Models\Comment;
 
-class CommentSeeder extends Seeder
+class CityRoomSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-       Comment::factory()->count(60)->create();
+        for($i=1;$i<=10;$i++){
+            DB::table('city_room')->insert([
+                'room_id' => mt_rand(1,10),
+                'city_id' => mt_rand(1,3),
+            ]);
+        }
     }
 }

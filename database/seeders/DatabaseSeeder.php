@@ -16,12 +16,18 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
+            CategorySeeder::class,
             UsersTableSeeder::class,
             CommentSeeder::class,
+            TagSeeder::class,
+            PostTagSeeder::class,
+
             RoomSeeder::class,
             CitySeeder::class,
             ReservationSeeder::class,
             OrderSeeder::class,
+            AddressSeeder::class,
+            CityRoomSeeder::class,
         ]);
 
         // User::factory(25)->create();
