@@ -27,18 +27,11 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
-            // 'address' => fake()->address(),
+            'address' => fake()->address(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
-            'meta' => [
-                'settings' => [
-                    'site_background' => 'black',
-                    'site_language' => 'en',
-                ],
-                'skills' => fake()->randomElements(['Laravel', 'PHP', 'WordPress', 'HTML-5', 'CSS-3', 'ReactJs'], mt_rand(1, 6)),
-                'gander' => fake()->randomElement(['male', 'female', 'Other']),
-            ],
+           
 
         ];
     }
