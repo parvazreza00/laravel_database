@@ -13,9 +13,9 @@ class Comment extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function user()
+    public function post()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(Post::class, 'post_id', 'id');
     }
 
     public function country(){

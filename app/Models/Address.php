@@ -16,6 +16,6 @@ class Address extends Model
     }
 
     public function comment(){
-        return $this->hasOneThrough(Comment::class, User::class,'id','user_id','user_id','id')->select('comment as user_comment');
+        return $this->hasOneThrough(Comment::class, User::class,'id','user_id','user_id','id');
     }
 }
