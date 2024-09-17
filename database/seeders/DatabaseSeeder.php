@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             LikeablesSeeder::class,
         ]);
 
-        // User::factory(25)->create();
+        // User::factory(2000)->create();
         // Comment::factory(10)->create();
 
         // User::factory()->create([
